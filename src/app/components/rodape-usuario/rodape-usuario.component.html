@@ -1,0 +1,6 @@
+
+<div class="flex pt-[5px] pb-[5px] rounded-[10%] pr-[30px] items-center h-[100%] w-[100%] text-[#37AB00]">
+    <img [src]="usuario.imagemUrl" alt="" srcset="" class=" w-[25px] h-auto rounded-[50%] ml-3 mr-3">
+    <span class="mr-3 text-sm font-bold">{{usuario.nome}}</span>
+    <fa-icon [icon]="sairIcone" class="grow-0 cursor-pointer" (click)="logout()"></fa-icon>
+</div>

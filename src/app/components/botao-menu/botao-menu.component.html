@@ -1,0 +1,9 @@
+<div class="block w-[100%]">
+    <button type="button" class="w-[100%] mb-[10px] border-0 pt-[10px] 
+    pr-[0px] pb-[5px] pl-[20px] rounded-[5px] text-left font-semibold 
+    cursor-pointer text-[#37AB00] bg-transparent selecionado" [class.selecionado]="selecionado" (click)="onClick">
+        <ng-content></ng-content>
+        <span class="inline-block align-middle w-[150px] 
+        ml-[15px] overflow-hidden whitespace-nowrap text-ellipsis">{{descricao}}</span>
+    </button> 
+</div>

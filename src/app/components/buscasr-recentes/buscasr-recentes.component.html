@@ -1,0 +1,10 @@
+<input type="text" class="w-[100%] pb-[10px] pt-[10px] pr-[5px] pl-[5px]
+ rounded-lg border-solid border-2 border-[#37AB00] text-base font-medium"
+ [(ngModel)]="campoPesquisa" placeholder="Pesquisar">
+
+    <div class="flex flex-wrap">
+        <span *ngFor="let pesquisa of pesquisasRecentes"
+        (click)="definirPesquisa(pesquisa)"
+        class="mr-[5px] pb-[5px] pt-[5px] pl-[10px] pr-[10px]
+        mt-[10px] text-sm rounded-2xl cursor-pointer border-solid border-2 border-[#37AB00] hover:bg-sky-700">{{pesquisa}}</span>
+    </div>

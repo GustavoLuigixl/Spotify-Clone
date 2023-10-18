@@ -1,0 +1,15 @@
+ <!-- Card -->
+    <div class="shadow-md rounded-lg  p-[20px] h-[150px] w-[90%]  relative overflow-hidden">
+        <!-- Artista -->
+        <div class="z-1 flex absolute top-0 left-0 h-[100%] w-[90%] pt-[10px] pl-[30px] flex-col justify-center items-start ">
+            <span class="text-slate-950 font-bold text-3xl">{{topArtista.nome}}
+            </span>
+          
+        </div>
+        <!-- Image -->
+        <div class="absolute top-0 left-0 h-[100%] w-[100%] bg-center bg-cover bg-no-repeat opacity-40 z-0" [style.background-image]="'url(' + topArtista.imagemUrl + ')'"> 
+            
+        </div>
+    </div>
+    
+

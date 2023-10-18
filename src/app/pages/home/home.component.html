@@ -1,0 +1,44 @@
+<div class="flex justify-between">
+    <div class="w-[100%] h-[100%] block">
+        <div class="ml-[40px] mt-2 w-[150px] rounded-full bg-trueGray-50 shadow-md">
+            <app-rodape-usuario></app-rodape-usuario>
+        </div>
+        <!-- Minhas Musicas -->
+        <div class="ml-[45px] mt-[2vh] pl-[0px] pr-[0px] pb-[20px] w-[94%] max-h-[100vh] overflow-y-scroll scrollbarr2">
+            <span class="text-[#37AB00] block font-bold text-3xl">
+                Seu top Artista
+            </span>
+
+            <app-top-artista class="mt-4 block"></app-top-artista>
+
+            <span class="mt-4 text-[#37AB00] block font-bold text-3xl">Musicas Curtidas</span>
+
+            <table class="mt-2 w-[100%] text-left table-fixed border-separate">
+               <thead class=" text-xs font-semibold">
+                    <tr class="text-zinc-500">
+                        <th class="pl-[10px] pr-[20px] whitespace-nowrap overflow-hidden text-ellipsis w-[3%]">#</th>
+                        <th class="pr-[20px] whitespace-nowrap overflow-hidden text-ellipsis w-[35%]">Titulo</th>
+                        <th class="pr-[20px] whitespace-nowrap overflow-hidden text-ellipsis w-[30%]">Artista</th>
+                        <th class="pr-[20px] whitespace-nowrap overflow-hidden text-ellipsis w-[10%] text-right">Tempo</th>
+                        <th class="pr-[20px] whitespace-nowrap overflow-hidden text-ellipsis w-[20%]">Album</th>
+                    </tr>
+               </thead> 
+
+               <tbody>
+                    <tr *ngFor="let musica of musicas" (click)="executarMusica(musica)" [class.exec]="musica.id == musicaAtual.id" >
+                        <td class="pr-[20px] whitespace-nowrap overflow-hidden text-ellipsis pl-[10px] pt-[10px] pr-[20px] pb-[10px] mt-[10px] font-medium text-sm  ">
+                            <fa-icon class="text-[#37AB00] text-xs" [icon]="playIcone"></fa-icon>
+                        </td>
+                        <td class="pr-[20px] whitespace-nowrap overflow-hidden text-ellipsis pt-[10px] pr-[20px] pb-[10px]  mt-[10px] font-medium text-sm ">{{musica.titulo}}</td>
+                        <td class="pr-[20px] whitespace-nowrap overflow-hidden text-ellipsis pt-[10px] pr-[20px] pb-[10px]  mt-[10px] font-medium text-sm ">{{obterArtistas(musica)}}</td>
+                        <td class="pr-[20px] whitespace-nowrap overflow-hidden text-ellipsis pt-[10px] pr-[20px] pb-[10px]  mt-[10px] font-medium text-sm text-right">{{musica.tempo}}</td>
+                        <td class="pr-[20px] whitespace-nowrap overflow-hidden text-ellipsis pt-[10px] pr-[20px] pb-[10px]  mt-[10px] font-medium text-sm ">{{musica.album.nome}}</td>
+                    </tr>
+               </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <app-painel-direito class="h-[100vh]"></app-painel-direito>
+</div>
